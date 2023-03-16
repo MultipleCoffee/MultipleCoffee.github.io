@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var lookupUrl = 'https://dictionary.cambridge.org/search/english/?q=';
 
-    var longpressDelay = 100;
+    var longpressDelay = 800;
     var pressTimer;
     var isLongPress = false;
 
@@ -13,11 +13,10 @@ $(document).ready(function () {
         }, longpressDelay);
     }).on('mouseup touchend', function (e) {
         clearTimeout(pressTimer);
-        if (!isLongPress) {
-            $('body').off('dblclick').dblclick(function (e) {
-                redirectToDictionary();
-            });
-        }
+    });
+
+    $('body').dblclick(function (e) {
+        redirectToDictionary();
     });
 
     function redirectToDictionary() {
