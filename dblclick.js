@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var lookupUrl = 'https://dictionary.cambridge.org/search/english/?q=';
 
-    var longpressDelay = 500;
+    var longpressDelay = 100;
     var pressTimer;
     var isLongPress = false;
 
